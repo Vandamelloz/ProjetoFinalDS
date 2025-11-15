@@ -30,7 +30,16 @@ app.get("/cadastro", (req, res) => {
 });
 
 app.use("", (req, res) => {
-    titulo= conteudo
+    Post.create({   
+    titulo= req.body.titulo;
+    conteudo= req.body.conteudo;
+    }).then(() => {
+         res.send("Post criado com sucesso!");
+    })
+    .cathch((err) => {
+        res.send("Houve um erro: " + err);
+    })
+   
 })
 const PORT = 8080;
 
