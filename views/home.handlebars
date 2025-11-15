@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>MEU BLOG PESSOAL</h1>
+    <p>Meus ultimos posts:</p>
+    <a href="/cadastro"><button class="btn btn-primary">CRIAR POST</button></a>
+    <hr>
+
+    {{#each posts}}
+    <small>{{createAt}}</small>
+    <h3>{{{titulo}}}</h3>
+    <p>{{{conteudo}}}</p>
+    <a href="/deletar/{{id}}"><button class="btn btn-danger">Deletar</button></a>
+     <a href="/edit/{{id}}"><button class="btn btn-success">EDITAR</button></a>
+    <hr>
+    {{/each}}
+
+
+</div>
